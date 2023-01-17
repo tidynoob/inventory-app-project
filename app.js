@@ -1,3 +1,8 @@
+require('dotenv').config();
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+const mongoDB = process.env.MONGO_CONNECTION_STRING;
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
